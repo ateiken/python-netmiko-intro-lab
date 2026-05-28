@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 
 # define device connection params
 device = {
-    'device_type': 'arista_ios',
+    'device_type': 'arista_eos',
     'host': '192.168.8.101',
     'username': 'ansible',
     'password': 'automation',
