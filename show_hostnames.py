@@ -1,5 +1,6 @@
 import pynetbox
 from netmiko import ConnectHandler
+from netmiko.exceptions import NetmikoTimeoutException, NetmikoAuthenticationException
 
 nb = pynetbox.api('http://192.168.8.10:8080', token='wu4VAC2xlNwk2aAtSzF2KFODDrFVSSzaOf0mUveG')
 
