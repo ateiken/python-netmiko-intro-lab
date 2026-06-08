@@ -28,8 +28,9 @@ for device in devices:
 
         # define config to push
         config_commands = [
-            'interface Loopback0',
-            'description Managed by Netmiko'
+            'banner motd ^',
+            'Unauthorized access is prohibited.',
+            '^'
         ]
         
         output = conn.send_config_set(config_commands)
