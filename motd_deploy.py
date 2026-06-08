@@ -26,9 +26,11 @@ for device in devices:
 
         # define config to push
         config_commands = [
-            'banner motd @',
-            'Managed by Netmiko',
-            '@'
+            'banner motd ^',
+            'Unauthorized access is prohibited.',
+            'All activities are monitored and recorded.',
+            'Disconnect immediately if you are not an authorized user.',
+            '^'
         ]
         
         output = conn.send_config_set(config_commands)
