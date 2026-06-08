@@ -26,9 +26,9 @@ for device in devices:
 
         # define config to push
         config_commands = [
-            'banner motd',
+            'banner motd @',
             'Managed by Netmiko',
-            'EOF'
+            '@'
         ]
         
         output = conn.send_config_set(config_commands)
