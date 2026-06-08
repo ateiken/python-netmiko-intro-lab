@@ -2,6 +2,8 @@ import pynetbox
 from netmiko import ConnectHandler
 from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
 import json
+import logging
+logging.basicConfig(filename='netmiko_debug.log', level=logging.DEBUG)
 
 nb = pynetbox.api('http://192.168.8.10:8080', token='wu4VAC2xlNwk2aAtSzF2KFODDrFVSSzaOf0mUveG')
 
