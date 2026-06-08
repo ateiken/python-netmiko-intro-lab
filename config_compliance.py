@@ -34,14 +34,16 @@ for device in devices:
         output = conn.send_command('show running-config')
         conn.disconnect()
         
+        print(f"{'device':<20} {'status':<10} {'Issues'}")
+        print('-' * 60)
+        
         for check in required_config:
             if check not in output:
                 issues.append(f'Missing required config: {check}')
         for check in prohibited_config:
             if check in output:
                 issues.append(f'Prohibited config found: {check}')
-        print(f"{'device':<20} {'status':<10} {'Issues'}")
-        print('-' * 60)
+
         
         if issues:
             print(f'{device.name:<20} {"FAIL":<10} {", ".join(issues)}')
