@@ -24,10 +24,7 @@ for device in devices:
             host=ip,
             username='ansible',
             password='automation',
-            secret='automation',
         )
-        
-        conn.enable()
 
         # define config to push
         config_commands = [
