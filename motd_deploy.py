@@ -20,7 +20,7 @@ for device in devices:
 
     try:
         conn = ConnectHandler(
-            device_type='arista_eos',
+            device_type='arista_eos_eapi',
             host=ip,
             username='ansible',
             password='automation',
