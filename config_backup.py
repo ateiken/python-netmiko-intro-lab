@@ -3,7 +3,7 @@ from netmiko import ConnectHandler
 from datetime import datetime
 import os
 
-nb = pynetbox.api('http://192.168.8.10:8080', token='YOUR_TOKEN')
+nb = pynetbox.api('http://192.168.8.10:8080', token='wu4VAC2xlNwk2aAtSzF2KFODDrFVSSzaOf0mUveG')
 devices = list(nb.dcim.devices.all())
 
 # create backup directory with timestamp
