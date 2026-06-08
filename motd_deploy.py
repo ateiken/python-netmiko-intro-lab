@@ -20,11 +20,13 @@ for device in devices:
 
     try:
         conn = ConnectHandler(
-            device_type='arista_eos_eapi',
+            device_type='arista_eos',
             host=ip,
             username='ansible',
             password='automation',
         )
+        
+        conn.enable()
 
         # define config to push
         config_commands = [
