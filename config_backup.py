@@ -1,5 +1,6 @@
 import pynetbox
 from netmiko import ConnectHandler
+from netmiko import ConnectHandler, NetmikoTimeoutException, NetmikoAuthenticationException
 from datetime import datetime
 import os
 
