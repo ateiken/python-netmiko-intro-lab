@@ -24,7 +24,7 @@ for device in devices:
             host=ip,
             username='ansible',
             password='automation',
-            secret='',
+            secret='automation',
         )
         
         conn.enable()
